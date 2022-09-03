@@ -1,651 +1,703 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" href="favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="favicons/favicon-48x48.png">
-  <link rel="manifest" href="favicons/manifest.json">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#fff">
-  <meta name="application-name" content="TechHub">
-  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="favicons/apple-touch-icon-167x167.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="1024x1024" href="favicons/apple-touch-icon-1024x1024.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="TechHub">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-640x1136.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-750x1334.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-828x1792.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-1125x2436.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-1242x2208.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-1242x2688.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-1536x2048.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-1668x2224.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-1668x2388.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-2048x2732.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    href="favicons/apple-touch-startup-image-1620x2160.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-1136x640.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-1334x750.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-1792x828.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-2436x1125.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-2208x1242.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-2688x1242.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-2048x1536.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-2224x1668.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-2388x1668.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-2732x2048.png">
-  <link rel="apple-touch-startup-image"
-    media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    href="favicons/apple-touch-startup-image-2160x1620.png">
-  <link rel="icon" type="image/png" sizes="228x228" href="favicons/coast-228x228.png">
-  <meta name="msapplication-TileColor" content="#020307">
-  <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-  <meta name="msapplication-config" content="favicons/browserconfig.xml">
-  <link rel="yandex-tableau-widget" href="favicons/yandex-browser-manifest.json">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
-  <title>TechHub</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicons/favicon-48x48.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name" content="TechHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="favicons/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="TechHub">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-640x1136.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-750x1334.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-828x1792.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-1125x2436.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-1242x2208.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-1242x2688.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-1536x2048.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-1668x2224.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-1668x2388.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-2048x2732.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="favicons/apple-touch-startup-image-1620x2160.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-1136x640.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-1334x750.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-1792x828.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-2436x1125.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-2208x1242.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-2688x1242.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-2048x1536.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-2224x1668.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-2388x1668.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-2732x2048.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="favicons/apple-touch-startup-image-2160x1620.png">
+    <link rel="icon" type="image/png" sizes="228x228" href="favicons/coast-228x228.png">
+    <meta name="msapplication-TileColor" content="#020307">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <link rel="yandex-tableau-widget" href="favicons/yandex-browser-manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>TechHub</title>
 </head>
 
 <body>
-  <header class="header">
-  <div class="container">
-    <div class="header__wrapper">
-      <img class="logo" src="../img/logo.svg" alt="AutoHub">
-      <div class="header__btn-box">
-        <a class="header__tel-btn header__mobile-btn" href="tel:+38 093 699 09 81"></a>
-        <button class="header__menu-btn header__mobile-btn"></button>
-      </div>
-      <nav class="menu">
-        <ul class="menu-list menu-list--mobile">
-          <li class="menu-list__item menu-list__item--active">
-            <a class="menu-list__link" href="/index.html">Главная</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="/pages/page-spares.html">Запчасти</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="/pages/page-about.html">О нас</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="/pages/page-contacts.html">Контакты</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="/pages/page-blog.html">Блог</a>
-          </li>
-          <li class="menu-list__item menu-list__item-number">
-            <a class="menu-list__link" href="tel:+38 099 699 09 81">+38 093 699 09 81</a>
-          </li>
-          <button class="menu__btn menu__btn--mobile"></button>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
-
-  <main class="main">
-    <div class="breadcrumbs">
-  <div class="container">
-    <ul class="breadcrumbs__list">
-      <li class="breadcrumbs__list-item">
-        <a class="breadcrumbs__list-link" href="/index.html">Главная</a>
-      </li>
-      <li class="breadcrumbs__list-item breadcrumbs__list-item--active">
-        <a class="breadcrumbs__list-link" href="#">Запчасти</a>
-      </li>
-    </ul>
-  </div>
-</div>
-    <div class="popup" id="popup-delivery">
-      <form class="popup__form" action="#">
-        <div class="popup__wrapper">
-          <button class="popup__close-btn" data-close></button>
-          <h2 class="popup__title">Заказ</h2>
-          <div class="popup__content">
-            <p class="popup__text">Оставьте ваше имя и номер телефона
-              и наш менеджер перезвонит вам</p>
-            <span class="popup__product">Амортизатор задний левый Land Rover Range Rover Sport Range Rover Sport (LS)
-              2005
-              -
-              2013</span>
-            <div class="popup__input-items">
-              <input class="popup__input" type="text" placeholder="Ваше имя" id="name" required>
-              <label class="popup__label" for="name">*</label>
-              <input class="popup__input" type="tel" placeholder="Ваш телефон" id="phone" required>
-              <label class="popup__label" for="phone">*</label>
-              <textarea class="popup__input popup__input-message" name="delivery-message" cols="30" rows="10"
-                placeholder="Коментарий"></textarea>
-              <input class="popup__btn" type="submit" value="Отправить">
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <div class="container">
-
-      <div class="product-content">
-        <aside class="aside">
-  <button class="aside__menu-btn"></button>
-  <form action="#" class="form-spares">
-    <div class="selection-box">
-      <div class="scroll">
-
-        <h2 class="selection-box__title selection-box__title-head">Подбор запчастей</h2>
-        <div class="form-spares__input-text">
-          <h4 class="form-spares__input-title">Артикул</h4>
-          <input class="form-spares__input-item" type="text" name="vendor-code" id="vendor-code">
-        </div>
-
-        <div class="form-spares__input-text">
-          <h4 class="form-spares__input-title">ОЕМ</h4>
-          <input class="form-spares__input-item" type="text" name="oem-code" id="oem-code">
-        </div>
-
-        <div class="accordion" id="brands">
-          <div class="accordion__header" data-checked="">
-            <h5 class="accordion__title">Марка</h5>
-            <span class="accordion__count">(1 452)</span>
-          </div>
-          <div class="accordion__content">
-            <input class="accordion__input-item" type="text" name="brands-input" id="brands-input">
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="brands-radio">
-              <p class="accordion__radio-name">CD-чейнджер, Проигрыватель CD-DVD
-                <span class="accordion__radio-count">(122)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="brands-radio">
-              <p class="accordion__radio-name">Абсорбер бампера
-                <span class="accordion__radio-count">(6)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="brands-radio">
-              <p class="accordion__radio-name">Автономный отопитель
-                <span class="accordion__radio-count">(122)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="brands-radio">
-              <p class="accordion__radio-name">Аккумуляторная батарея, конвертор, проводка, крепление и д.р
-                <span class="accordion__radio-count">(525)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="brands-radio">
-              <p class="accordion__radio-name">Аксессуары
-                <span class="accordion__radio-count">(6)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="brands-radio">
-              <p class="accordion__radio-name">Активный стабилизаттор поперечной устойчивости, блок управления
-                <span class="accordion__radio-count">(8)</span>
-              </p>
-            </label>
-          </div>
-
-
-        </div>
-
-        <div class="accordion" id="model">
-          <div class="accordion__header" data-checked="">
-            <h5 class="accordion__title">Модель</h5>
-            <span class="accordion__count">(1 222)</span>
-          </div>
-          <div class="accordion__content">
-            <input class="accordion__input-item" type="text" name="model-input" id="model-input">
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="model-radio">
-              <p class="accordion__radio-name">CD-чейнджер, Проигрыватель CD-DVD
-                <span class="accordion__radio-count">(122)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="model-radio">
-              <p class="accordion__radio-name">Абсорбер бампера
-                <span class="accordion__radio-count">(6)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="model-radio">
-              <p class="accordion__radio-name">Автономный отопитель
-                <span class="accordion__radio-count">(122)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="model-radio">
-              <p class="accordion__radio-name">Аккумуляторная батарея, конвертор, проводка, крепление и д.р
-                <span class="accordion__radio-count">(525)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="model-radio">
-              <p class="accordion__radio-name">Аксессуары
-                <span class="accordion__radio-count">(6)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="model-radio">
-              <p class="accordion__radio-name">Активный стабилизаттор поперечной устойчивости, блок управления
-                <span class="accordion__radio-count">(8)</span>
-              </p>
-            </label>
-          </div>
-
-
-        </div>
-
-        <div class="accordion" id="spares">
-          <div class="accordion__header" data-checked="">
-            <h5 class="accordion__title">Запчасти</h5>
-            <span class="accordion__count">(1 223 344)</span>
-          </div>
-          <div class="accordion__content">
-            <input class="accordion__input-item" type="text" name="spares-input" id="spares-input">
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="spares-radio">
-              <p class="accordion__radio-name">CD-чейнджер, Проигрыватель CD-DVD
-                <span class="accordion__radio-count">(122)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="spares-radio">
-              <p class="accordion__radio-name">Абсорбер бампера
-                <span class="accordion__radio-count">(6)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="spares-radio">
-              <p class="accordion__radio-name">Автономный отопитель
-                <span class="accordion__radio-count">(122)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="spares-radio">
-              <p class="accordion__radio-name">Аккумуляторная батарея, конвертор, проводка, крепление и д.р
-                <span class="accordion__radio-count">(525)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="spares-radio">
-              <p class="accordion__radio-name">Аксессуары
-                <span class="accordion__radio-count">(6)</span>
-              </p>
-            </label>
-
-            <label class="accordion__label">
-              <input class="accordion__radio _visually-hidden" type="radio" name="spares-radio">
-              <p class="accordion__radio-name">Активный стабилизаттор поперечной устойчивости, блок управления
-                <span class="accordion__radio-count">(8)</span>
-              </p>
-            </label>
-          </div>
-
-
-        </div>
-      </div>
-
-    </div>
-
-    <div class="form-spares__wrapper-btn--mobile">
-      <input class="form-spares__submit" type="submit" value="Искать">
-      <input class="form-spares__reset" type="reset" value="очистить">
-    </div>
-  </form>
-
-  <div class="tags">
-    <h2 class="tags__title">Марки авто</h2>
-    <ul class="tags__list">
-      <li class="tags__item">
-        <a href="#" class="tags__link">Alfa romeo</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Audi</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">BMW</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Chrysler</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Citroen</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Daewoo</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Fiat</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Ford</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Honda</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Hyundai</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Jeep</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Mazda</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Mercedes</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">Mini</a>
-      </li>
-      <li class="tags__item">
-        <a href="#" class="tags__link">еще</a>
-      </li>
-    </ul>
-  </div>
-</aside>
-
-        <div class="product-content__wrapper">
-
-          <button class="product-content__aside-btn--mobile">Фильтр</button>
-          <section class="gallery">
-            <div class="gallery__tags-info">
-              <span class="gallery__tags-item">в наличии</span>
-              <span class="gallery__tags-vendor">Артикул: <strong>1234565</strong></span>
-            </div>
-
-            <h4 class="gallery__title">Расходомер воздуха 3455653234 Mercedes S-klasse 2010 - 2019</h4>
-
-            <div class="gallery__content">
-              <div class="gallery__img">
-                <div class="gallery__img-wrapper">
-                  <img class="gallery__img-item" src="../img/product-1.png" alt="product">
-                  <img class="gallery__img-item" src="../img/product-2.png" alt="product">
-                  <img class="gallery__img-item" src="../img/product-3.png" alt="product">
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <img class="logo" src="../img/logo.svg" alt="AutoHub">
+                <div class="header__btn-box">
+                    <a class="header__tel-btn header__mobile-btn" href="tel:+38 093 699 09 81"></a>
+                    <button class="header__menu-btn header__mobile-btn"></button>
                 </div>
-                <img class="gallery__image" src="../img/product-1.png" alt="product">
-              </div>
-
-              <div class="gallery__info">
-                <table class="gallery__table">
-                  <tbody>
-                    <tr class="gallery__table-row">
-                      <td class="gallery__table-cell gallery__table-title">Марка</td>
-                      <td class="gallery__table-cell gallery__table-content">Mersedes</td>
-                    </tr>
-
-                    <tr class="gallery__table-row">
-                      <td class="gallery__table-cell gallery__table-title">Модель</td>
-                      <td class="gallery__table-cell gallery__table-content">S-klass</td>
-                    </tr>
-
-                    <tr class="gallery__table-row">
-                      <td class="gallery__table-cell gallery__table-title">OEM</td>
-                      <td class="gallery__table-cell gallery__table-content">344gf355</td>
-                    </tr>
-
-                    <tr class="gallery__table-row">
-                      <td class="gallery__table-cell gallery__table-title">Год</td>
-                      <td class="gallery__table-cell gallery__table-content">2011</td>
-                    </tr>
-
-                    <tr class="gallery__table-row">
-                      <td class="gallery__table-cell gallery__table-title">Тип ДВС</td>
-                      <td class="gallery__table-cell gallery__table-content">бензин</td>
-                    </tr>
-
-                    <tr class="gallery__table-row">
-                      <td class="gallery__table-cell gallery__table-title">Объем</td>
-                      <td class="gallery__table-cell gallery__table-content">5.5</td>
-                    </tr>
-
-                    <tr class="gallery__table-row">
-                      <td class="gallery__table-cell gallery__table-title">Коментарий</td>
-                      <td class="gallery__table-cell gallery__table-content">Сайт использует файлы cookie, чтобы
-                        гарантировать максимальное </td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <div class="gallery__price">
-                  <span class="gallery__price-count">
-                    <strong>100</strong> UAH <span class="gallery__price-count gallery__price-count--color">/ 3$</span>
-                  </span>
-                  <button class="gallery__btn">Заказать</>
-                </div>
-
-              </div>
+                <nav class="menu">
+                    <ul class="menu-list menu-list--mobile">
+                        <li class="menu-list__item menu-list__item--active">
+                            <a class="menu-list__link" href="/index.html">Главная</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a class="menu-list__link" href="/pages/page-spares.html">Запчасти</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a class="menu-list__link" href="/pages/page-about.html">О нас</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a class="menu-list__link" href="/pages/page-contacts.html">Контакты</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a class="menu-list__link" href="/pages/page-blog.html">Блог</a>
+                        </li>
+                        <li class="menu-list__item menu-list__item-number">
+                            <a class="menu-list__link" href="tel:+38 099 699 09 81">+38 093 699 09 81</a>
+                        </li>
+                        <button class="menu__btn menu__btn--mobile"></button>
+                    </ul>
+                </nav>
             </div>
-          </section>
+        </div>
+    </header>
 
-          <div class="other">
-            <div class="other__head">
-              <label class="other__label">
-                <input class="other__radio _visually-hidden" type="radio" name="other-info" checked value="slider">
-                <h5 class="other__title">Похожие запчасти</h5>
-              </label>
-
-              <label class="other__label">
-                <input class="other__radio _visually-hidden" type="radio" name="other-info" value="info">
-                <h5 class="other__title">Дополнительная информация</h5>
-              </label>
-            </div>
-
-            <div class="other__content">
-              <div class="other-slider swiper" data-item="slider" data-active>
-                <div class="swiper-wrapper">
-                  <div class="other-slider__item swiper-slide">
-                    <div class="card ">
-                      <img class="card__img" src="../img/product-1.png" alt="">
-                      <p class="card__descr">Ручка наружная 00093654 Ford Explorer v 2010 - 2019</p>
-                      <div class="card__price"><span class="card__price-count">100</span> UAH
-                        <span class="card__price-count--color">/ 3$</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="other-slider__item swiper-slide">
-                    <div class="card ">
-                      <img class="card__img" src="../img/product-2.png" alt="">
-                      <p class="card__descr">Блок упраления ДВС 00089225 Infiniti FX I 2002 - 2008</p>
-                      <div class="card__price"><span class="card__price-count">10 000</span> UAH
-                        <span class="card__price-count--color">/ 350$</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="other-slider__item swiper-slide">
-                    <div class="card ">
-                      <img class="card__img" src="../img/product-3.png" alt="">
-                      <p class="card__descr">Двигатель 00058557 Honda Pilot II 2008 - 2015</p>
-                      <div class="card__price"><span class="card__price-count">1000</span> UAH
-                        <span class="card__price-count--color">/ 35$</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="other-slider__item swiper-slide">
-                    <div class="card ">
-                      <img class="card__img" src="../img/product-1.png" alt="">
-                      <p class="card__descr">Ручка наружная 00093654 Ford Explorer v 2010 - 2019</p>
-                      <div class="card__price"><span class="card__price-count">100</span> UAH
-                        <span class="card__price-count--color">/ 3$</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="other-slider__item swiper-slide">
-                    <div class="card ">
-                      <img class="card__img" src="../img/product-2.png" alt="">
-                      <p class="card__descr">Блок упраления ДВС 00089225 Infiniti FX I 2002 - 2008</p>
-                      <div class="card__price"><span class="card__price-count">10 000</span> UAH
-                        <span class="card__price-count--color">/ 350$</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="other-slider__item swiper-slide">
-                    <div class="card ">
-                      <img class="card__img" src="../img/product-3.png" alt="">
-                      <p class="card__descr">Двигатель 00058557 Honda Pilot II 2008 - 2015</p>
-                      <div class="card__price"><span class="card__price-count">1000</span> UAH
-                        <span class="card__price-count--color">/ 35$</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-              </div>
-
-              <div class="other-info" data-item="info">
-                <ul class="other-info__list">
-                  <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака зачастую
-                    возникают тогда, когда автомобиль был заправлен некачественным бензином. После того, как водитель
-                    замечает,
-                    что в бак было залито топливо низкого качества, слить такой бензин, наиболее разумное решение, чтобы
-                    избежать
-                    возможных поломок двигателя. Второй причиной, по которой может понадобиться слить топливо из бака
-                    может стать
-                    необходимость использования бензина </li>
-                  <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака зачастую
-                    возникают тогда, когда автомобиль был заправлен некачественным бензином. </li>
-                  <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака зачастую
-                    возникают тогда, когда автомобиль был заправлен некачественным бензином. </li>
-                  <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака зачастую
-                    возникают
-                    тогда, когда автомобиль был заправлен некачественным бензином. </li>
-                  <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака зачастую
-                    возникают
-                    тогда, когда автомобиль был заправлен некачественным бензином. </li>
-                  <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака зачастую
-                    возникают
-                    тогда, когда автомобиль был заправлен некачественным бензином. </li>
+    <main class="main">
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__list-item">
+                        <a class="breadcrumbs__list-link" href="/index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__list-item breadcrumbs__list-item--active">
+                        <a class="breadcrumbs__list-link" href="#">Запчасти</a>
+                    </li>
                 </ul>
-              </div>
             </div>
-          </div>
-
-          <div class="textbox">
-            <h2 class="title textbox__title">Блок для SEO текста</h2>
-            <div class="textbox__text">
-              <p class="textbox__text-inner">
-                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут
-                они в
-                буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей
-                стране
-                и
-                обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены
-                предложения
-                залетают прямо в рот.
-              </p>
-              <a href="#" class="link">Читать полностью</a>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="popup" id="popup-delivery">
+            <form class="popup__form" action="#">
+                <div class="popup__wrapper">
+                    <button class="popup__close-btn" data-close></button>
+                    <h2 class="popup__title">Заказ</h2>
+                    <div class="popup__content">
+                        <p class="popup__text">Оставьте ваше имя и номер телефона
+                            и наш менеджер перезвонит вам</p>
+                        <span class="popup__product">Амортизатор задний левый Land Rover Range Rover Sport Range Rover
+                            Sport (LS)
+                            2005
+                            -
+                            2013</span>
+                        <div class="popup__input-items">
+                            <input class="popup__input" type="text" placeholder="Ваше имя" id="name" required>
+                            <label class="popup__label" for="name">*</label>
+                            <input class="popup__input" type="tel" placeholder="Ваш телефон" id="phone" required>
+                            <label class="popup__label" for="phone">*</label>
+                            <textarea class="popup__input popup__input-message" name="delivery-message" cols="30"
+                                rows="10" placeholder="Коментарий"></textarea>
+                            <input class="popup__btn" type="submit" value="Отправить">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+
+            <div class="product-content">
+                <aside class="aside">
+                    <button class="aside__menu-btn"></button>
+                    <form action="#" class="form-spares">
+                        <div class="selection-box">
+                            <div class="scroll">
+
+                                <h2 class="selection-box__title selection-box__title-head">Подбор запчастей</h2>
+                                <div class="form-spares__input-text">
+                                    <h4 class="form-spares__input-title">Артикул</h4>
+                                    <input class="form-spares__input-item" type="text" name="vendor-code"
+                                        id="vendor-code">
+                                </div>
+
+                                <div class="form-spares__input-text">
+                                    <h4 class="form-spares__input-title">ОЕМ</h4>
+                                    <input class="form-spares__input-item" type="text" name="oem-code" id="oem-code">
+                                </div>
+
+                                <div class="accordion" id="brands">
+                                    <div class="accordion__header" data-checked="">
+                                        <h5 class="accordion__title">Марка</h5>
+                                        <span class="accordion__count">(1 452)</span>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <input class="accordion__input-item" type="text" name="brands-input"
+                                            id="brands-input">
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="brands-radio">
+                                            <p class="accordion__radio-name">CD-чейнджер, Проигрыватель CD-DVD
+                                                <span class="accordion__radio-count">(122)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="brands-radio">
+                                            <p class="accordion__radio-name">Абсорбер бампера
+                                                <span class="accordion__radio-count">(6)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="brands-radio">
+                                            <p class="accordion__radio-name">Автономный отопитель
+                                                <span class="accordion__radio-count">(122)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="brands-radio">
+                                            <p class="accordion__radio-name">Аккумуляторная батарея, конвертор,
+                                                проводка, крепление и д.р
+                                                <span class="accordion__radio-count">(525)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="brands-radio">
+                                            <p class="accordion__radio-name">Аксессуары
+                                                <span class="accordion__radio-count">(6)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="brands-radio">
+                                            <p class="accordion__radio-name">Активный стабилизаттор поперечной
+                                                устойчивости, блок управления
+                                                <span class="accordion__radio-count">(8)</span>
+                                            </p>
+                                        </label>
+                                    </div>
 
 
-    </div>
-    <footer class="footer">
-  <div class="container">
-    <div class="footer__wrapper">
-      <img src="../img/logo.svg" alt="AutoHub" class="logo">
-      <ul class="footer-list">
-        <li class="footer-list__item"><a href="/pages/page-about.html" class="footer-list__link">О Нас</a></li>
-        <li class="footer-list__item"><a href="" class="footer-list__link">Оплата</a></li>
-        <li class="footer-list__item"><a href="" class="footer-list__link">Доставка</a></li>
-        <li class="footer-list__item"><a href="" class="footer-list__link">Гарантия</a></li>
-        <li class="footer-list__item"><a href="" class="footer-list__link">Скидки</a></li>
-        <li class="footer-list__item"><a href="" class="footer-list__link">Новости</a></li>
-        <li class="footer-list__item"><a href="" class="footer-list__link">Карьера</a></li>
-        <li class="footer-list__item"><a href="/pages/page-contacts.html" class="footer-list__link">Контакты</a></li>
-      </ul>
-      <div class="social">
-        <a href="" class="social__link"><img src="../img/instagram.svg" alt="instagram"></a>
-        <a href="" class="social__link"><img src="../img/facebook.svg" alt="facebook"></a>
-        <a href="" class="social__link"><img src="../img/youtube.svg" alt="youtube"></a>
-        <a href="" class="social__link"><img src="../img/google.svg" alt="google"></a>
-      </div>
-      <div class="copyright">
-        <p class="copyright__text">Работает на системе <span>Ubase</span></p>
-      </div>
-    </div>
-  </div>
-</footer>
-  </main>
+                                </div>
 
-  <script src="../js/main.bundle.js"></script>
+                                <div class="accordion" id="model">
+                                    <div class="accordion__header" data-checked="">
+                                        <h5 class="accordion__title">Модель</h5>
+                                        <span class="accordion__count">(1 222)</span>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <input class="accordion__input-item" type="text" name="model-input"
+                                            id="model-input">
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="model-radio">
+                                            <p class="accordion__radio-name">CD-чейнджер, Проигрыватель CD-DVD
+                                                <span class="accordion__radio-count">(122)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="model-radio">
+                                            <p class="accordion__radio-name">Абсорбер бампера
+                                                <span class="accordion__radio-count">(6)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="model-radio">
+                                            <p class="accordion__radio-name">Автономный отопитель
+                                                <span class="accordion__radio-count">(122)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="model-radio">
+                                            <p class="accordion__radio-name">Аккумуляторная батарея, конвертор,
+                                                проводка, крепление и д.р
+                                                <span class="accordion__radio-count">(525)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="model-radio">
+                                            <p class="accordion__radio-name">Аксессуары
+                                                <span class="accordion__radio-count">(6)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="model-radio">
+                                            <p class="accordion__radio-name">Активный стабилизаттор поперечной
+                                                устойчивости, блок управления
+                                                <span class="accordion__radio-count">(8)</span>
+                                            </p>
+                                        </label>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="accordion" id="spares">
+                                    <div class="accordion__header" data-checked="">
+                                        <h5 class="accordion__title">Запчасти</h5>
+                                        <span class="accordion__count">(1 223 344)</span>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <input class="accordion__input-item" type="text" name="spares-input"
+                                            id="spares-input">
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="spares-radio">
+                                            <p class="accordion__radio-name">CD-чейнджер, Проигрыватель CD-DVD
+                                                <span class="accordion__radio-count">(122)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="spares-radio">
+                                            <p class="accordion__radio-name">Абсорбер бампера
+                                                <span class="accordion__radio-count">(6)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="spares-radio">
+                                            <p class="accordion__radio-name">Автономный отопитель
+                                                <span class="accordion__radio-count">(122)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="spares-radio">
+                                            <p class="accordion__radio-name">Аккумуляторная батарея, конвертор,
+                                                проводка, крепление и д.р
+                                                <span class="accordion__radio-count">(525)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="spares-radio">
+                                            <p class="accordion__radio-name">Аксессуары
+                                                <span class="accordion__radio-count">(6)</span>
+                                            </p>
+                                        </label>
+
+                                        <label class="accordion__label">
+                                            <input class="accordion__radio _visually-hidden" type="radio"
+                                                name="spares-radio">
+                                            <p class="accordion__radio-name">Активный стабилизаттор поперечной
+                                                устойчивости, блок управления
+                                                <span class="accordion__radio-count">(8)</span>
+                                            </p>
+                                        </label>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-spares__wrapper-btn--mobile">
+                            <input class="form-spares__submit" type="submit" value="Искать">
+                            <input class="form-spares__reset" type="reset" value="очистить">
+                        </div>
+                    </form>
+
+                    <div class="tags">
+                        <h2 class="tags__title">Марки авто</h2>
+                        <ul class="tags__list">
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Alfa romeo</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Audi</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">BMW</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Chrysler</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Citroen</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Daewoo</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Fiat</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Ford</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Honda</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Hyundai</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Jeep</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Mazda</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Mercedes</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">Mini</a>
+                            </li>
+                            <li class="tags__item">
+                                <a href="#" class="tags__link">еще</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div class="product-content__wrapper">
+
+                    <button class="product-content__aside-btn--mobile">Фильтр</button>
+                    <section class="gallery">
+                        <div class="gallery__tags-info">
+                            <span class="gallery__tags-item">в наличии</span>
+                            <span class="gallery__tags-vendor">Артикул: <strong>1234565</strong></span>
+                        </div>
+
+                        <h4 class="gallery__title">Расходомер воздуха 3455653234 Mercedes S-klasse 2010 - 2019</h4>
+
+                        <div class="gallery__content">
+                            <div class="gallery__img">
+                                <div class="gallery__img-wrapper">
+                                    <img class="gallery__img-item" src="../img/product-1.png" alt="product">
+                                    <img class="gallery__img-item" src="../img/product-2.png" alt="product">
+                                    <img class="gallery__img-item" src="../img/product-3.png" alt="product">
+                                </div>
+                                <img class="gallery__image" src="../img/product-1.png" alt="product">
+                            </div>
+
+                            <div class="gallery__info">
+                                <table class="gallery__table">
+                                    <tbody>
+                                        <tr class="gallery__table-row">
+                                            <td class="gallery__table-cell gallery__table-title">Марка</td>
+                                            <td class="gallery__table-cell gallery__table-content">Mersedes</td>
+                                        </tr>
+
+                                        <tr class="gallery__table-row">
+                                            <td class="gallery__table-cell gallery__table-title">Модель</td>
+                                            <td class="gallery__table-cell gallery__table-content">S-klass</td>
+                                        </tr>
+
+                                        <tr class="gallery__table-row">
+                                            <td class="gallery__table-cell gallery__table-title">OEM</td>
+                                            <td class="gallery__table-cell gallery__table-content">344gf355</td>
+                                        </tr>
+
+                                        <tr class="gallery__table-row">
+                                            <td class="gallery__table-cell gallery__table-title">Год</td>
+                                            <td class="gallery__table-cell gallery__table-content">2011</td>
+                                        </tr>
+
+                                        <tr class="gallery__table-row">
+                                            <td class="gallery__table-cell gallery__table-title">Тип ДВС</td>
+                                            <td class="gallery__table-cell gallery__table-content">бензин</td>
+                                        </tr>
+
+                                        <tr class="gallery__table-row">
+                                            <td class="gallery__table-cell gallery__table-title">Объем</td>
+                                            <td class="gallery__table-cell gallery__table-content">5.5</td>
+                                        </tr>
+
+                                        <tr class="gallery__table-row">
+                                            <td class="gallery__table-cell gallery__table-title">Коментарий</td>
+                                            <td class="gallery__table-cell gallery__table-content">Сайт использует файлы
+                                                cookie, чтобы
+                                                гарантировать максимальное </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="gallery__price">
+                                    <span class="gallery__price-count">
+                                        <strong>100</strong> UAH <span
+                                            class="gallery__price-count gallery__price-count--color">/ 3$</span>
+                                    </span>
+                                    <button class="gallery__btn">Заказать</>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="other">
+                        <div class="other__head">
+                            <label class="other__label">
+                                <input class="other__radio _visually-hidden" type="radio" name="other-info" checked
+                                    value="slider">
+                                <h5 class="other__title">Похожие запчасти</h5>
+                            </label>
+
+                            <label class="other__label">
+                                <input class="other__radio _visually-hidden" type="radio" name="other-info"
+                                    value="info">
+                                <h5 class="other__title">Дополнительная информация</h5>
+                            </label>
+                        </div>
+
+                        <div class="other__content">
+                            <div class="other-slider swiper" data-item="slider" data-active>
+                                <div class="swiper-wrapper">
+                                    <div class="other-slider__item swiper-slide">
+                                        <div class="card ">
+                                            <img class="card__img" src="../img/product-1.png" alt="">
+                                            <p class="card__descr">Ручка наружная 00093654 Ford Explorer v 2010 - 2019
+                                            </p>
+                                            <div class="card__price"><span class="card__price-count">100</span> UAH
+                                                <span class="card__price-count--color">/ 3$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="other-slider__item swiper-slide">
+                                        <div class="card ">
+                                            <img class="card__img" src="../img/product-2.png" alt="">
+                                            <p class="card__descr">Блок упраления ДВС 00089225 Infiniti FX I 2002 - 2008
+                                            </p>
+                                            <div class="card__price"><span class="card__price-count">10 000</span> UAH
+                                                <span class="card__price-count--color">/ 350$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="other-slider__item swiper-slide">
+                                        <div class="card ">
+                                            <img class="card__img" src="../img/product-3.png" alt="">
+                                            <p class="card__descr">Двигатель 00058557 Honda Pilot II 2008 - 2015</p>
+                                            <div class="card__price"><span class="card__price-count">1000</span> UAH
+                                                <span class="card__price-count--color">/ 35$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="other-slider__item swiper-slide">
+                                        <div class="card ">
+                                            <img class="card__img" src="../img/product-1.png" alt="">
+                                            <p class="card__descr">Ручка наружная 00093654 Ford Explorer v 2010 - 2019
+                                            </p>
+                                            <div class="card__price"><span class="card__price-count">100</span> UAH
+                                                <span class="card__price-count--color">/ 3$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="other-slider__item swiper-slide">
+                                        <div class="card ">
+                                            <img class="card__img" src="../img/product-2.png" alt="">
+                                            <p class="card__descr">Блок упраления ДВС 00089225 Infiniti FX I 2002 - 2008
+                                            </p>
+                                            <div class="card__price"><span class="card__price-count">10 000</span> UAH
+                                                <span class="card__price-count--color">/ 350$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="other-slider__item swiper-slide">
+                                        <div class="card ">
+                                            <img class="card__img" src="../img/product-3.png" alt="">
+                                            <p class="card__descr">Двигатель 00058557 Honda Pilot II 2008 - 2015</p>
+                                            <div class="card__price"><span class="card__price-count">1000</span> UAH
+                                                <span class="card__price-count--color">/ 35$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+
+                            <div class="other-info" data-item="info">
+                                <ul class="other-info__list">
+                                    <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака
+                                        зачастую
+                                        возникают тогда, когда автомобиль был заправлен некачественным бензином. После
+                                        того, как водитель
+                                        замечает,
+                                        что в бак было залито топливо низкого качества, слить такой бензин, наиболее
+                                        разумное решение, чтобы
+                                        избежать
+                                        возможных поломок двигателя. Второй причиной, по которой может понадобиться
+                                        слить топливо из бака
+                                        может стать
+                                        необходимость использования бензина </li>
+                                    <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака
+                                        зачастую
+                                        возникают тогда, когда автомобиль был заправлен некачественным бензином. </li>
+                                    <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака
+                                        зачастую
+                                        возникают тогда, когда автомобиль был заправлен некачественным бензином. </li>
+                                    <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака
+                                        зачастую
+                                        возникают
+                                        тогда, когда автомобиль был заправлен некачественным бензином. </li>
+                                    <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака
+                                        зачастую
+                                        возникают
+                                        тогда, когда автомобиль был заправлен некачественным бензином. </li>
+                                    <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака
+                                        зачастую
+                                        возникают
+                                        тогда, когда автомобиль был заправлен некачественным бензином. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="textbox">
+                        <h2 class="title textbox__title">Блок для SEO текста</h2>
+                        <div class="textbox__text">
+                            <p class="textbox__text-inner">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                Вдали от всех живут
+                                они в
+                                буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                                журчит по всей
+                                стране
+                                и
+                                обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой
+                                жаренные члены
+                                предложения
+                                залетают прямо в рот.
+                            </p>
+                            <a href="#" class="link">Читать полностью</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <img src="../img/logo.svg" alt="AutoHub" class="logo">
+                    <ul class="footer-list">
+                        <li class="footer-list__item"><a href="/pages/page-about.html" class="footer-list__link">О
+                                Нас</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Оплата</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Доставка</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Гарантия</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Скидки</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Новости</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Карьера</a></li>
+                        <li class="footer-list__item"><a href="/pages/page-contacts.html"
+                                class="footer-list__link">Контакты</a></li>
+                    </ul>
+                    <div class="social">
+                        <a href="" class="social__link"><img src="../img/instagram.svg" alt="instagram"></a>
+                        <a href="" class="social__link"><img src="../img/facebook.svg" alt="facebook"></a>
+                        <a href="" class="social__link"><img src="../img/youtube.svg" alt="youtube"></a>
+                        <a href="" class="social__link"><img src="../img/google.svg" alt="google"></a>
+                    </div>
+                    <div class="copyright">
+                        <p class="copyright__text">Работает на системе <span>Ubase</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="../js/main.bundle.js"></script>
 </body>
 
 </html>
