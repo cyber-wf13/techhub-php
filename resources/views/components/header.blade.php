@@ -9,19 +9,19 @@
             <nav class="menu">
                 <ul class="menu-list menu-list--mobile">
                     <li class="menu-list__item menu-list__item--active">
-                        <a class="menu-list__link" href="/index.html">Главная</a>
+                        <a class="menu-list__link" href="/">Головна</a>
                     </li>
                     <li class="menu-list__item">
-                        <a class="menu-list__link" href="/pages/page-spares.html">Запчасти</a>
+                        <a class="menu-list__link" href="shop">Магазин</a>
                     </li>
                     <li class="menu-list__item">
-                        <a class="menu-list__link" href="/pages/page-about.html">О нас</a>
+                        <a class="menu-list__link" href="/about">О нас</a>
                     </li>
                     <li class="menu-list__item">
-                        <a class="menu-list__link" href="/pages/page-contacts.html">Контакты</a>
+                        <a class="menu-list__link" href="/contacts">Контакты</a>
                     </li>
                     <li class="menu-list__item">
-                        <a class="menu-list__link" href="/pages/page-blog.html">Блог</a>
+                        <a class="menu-list__link" href="/blog">Блог</a>
                     </li>
                     <li class="menu-list__item menu-list__item-number">
                         <a class="menu-list__link" href="tel:+38 099 699 09 81">+38 093 699 09 81</a>

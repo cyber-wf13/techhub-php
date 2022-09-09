@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +19,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/shop', [ProductsController::class, 'index']);
+Route::get('/contacts', [ContactsController::class, 'index']);
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index']);
+Route::get('/product/{id}', [ProductsController::class, 'single']);

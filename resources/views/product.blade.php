@@ -9,11 +9,7 @@
                 <div class="popup__content">
                     <p class="popup__text">Оставьте ваше имя и номер телефона
                         и наш менеджер перезвонит вам</p>
-                    <span class="popup__product">Амортизатор задний левый Land Rover Range Rover Sport Range Rover
-                        Sport (LS)
-                        2005
-                        -
-                        2013</span>
+                    <span class="popup__product">{{$product->name}}</span>
                     <div class="popup__input-items">
                         <input class="popup__input" type="text" placeholder="Ваше имя" id="name" required>
                         <label class="popup__label" for="name">*</label>
@@ -41,7 +37,7 @@
                         <span class="gallery__tags-vendor">Артикул: <strong>1234565</strong></span>
                     </div>
 
-                    <h4 class="gallery__title">Расходомер воздуха 3455653234 Mercedes S-klasse 2010 - 2019</h4>
+                    <h4 class="gallery__title">{{$product->name}}</h4>
 
                     <div class="gallery__content">
                         <div class="gallery__img">
@@ -58,46 +54,20 @@
                                 <tbody>
                                     <tr class="gallery__table-row">
                                         <td class="gallery__table-cell gallery__table-title">Марка</td>
-                                        <td class="gallery__table-cell gallery__table-content">Mersedes</td>
-                                    </tr>
-
-                                    <tr class="gallery__table-row">
-                                        <td class="gallery__table-cell gallery__table-title">Модель</td>
-                                        <td class="gallery__table-cell gallery__table-content">S-klass</td>
-                                    </tr>
-
-                                    <tr class="gallery__table-row">
-                                        <td class="gallery__table-cell gallery__table-title">OEM</td>
-                                        <td class="gallery__table-cell gallery__table-content">344gf355</td>
+                                        <td class="gallery__table-cell gallery__table-content">{{$product->brand_id->name}}</td>
                                     </tr>
 
                                     <tr class="gallery__table-row">
                                         <td class="gallery__table-cell gallery__table-title">Год</td>
-                                        <td class="gallery__table-cell gallery__table-content">2011</td>
+                                        <td class="gallery__table-cell gallery__table-content">{{$product->year}}</td>
                                     </tr>
 
-                                    <tr class="gallery__table-row">
-                                        <td class="gallery__table-cell gallery__table-title">Тип ДВС</td>
-                                        <td class="gallery__table-cell gallery__table-content">бензин</td>
-                                    </tr>
-
-                                    <tr class="gallery__table-row">
-                                        <td class="gallery__table-cell gallery__table-title">Объем</td>
-                                        <td class="gallery__table-cell gallery__table-content">5.5</td>
-                                    </tr>
-
-                                    <tr class="gallery__table-row">
-                                        <td class="gallery__table-cell gallery__table-title">Коментарий</td>
-                                        <td class="gallery__table-cell gallery__table-content">Сайт использует файлы
-                                            cookie, чтобы
-                                            гарантировать максимальное </td>
-                                    </tr>
                                 </tbody>
                             </table>
 
                             <div class="gallery__price">
                                 <span class="gallery__price-count">
-                                    <strong>100</strong> UAH <span class="gallery__price-count gallery__price-count--color">/ 3$</span>
+                                    <strong>{{$product->price}}</strong> UAH <span class="gallery__price-count gallery__price-count--color">/ 3$</span>
                                 </span>
                                 <button class="gallery__btn">Заказать</>
                             </div>
