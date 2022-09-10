@@ -10,8 +10,8 @@ class Product extends Model
     use HasFactory;
     public $timestamps = false;
 
-    public function brand_id()
+    public function brand()
     {
-        return $this->hasOne(Brand::class, 'id', 'brand');
+        return $this->hasOne(Brand::class, 'id', 'brand_id');
     }
 }

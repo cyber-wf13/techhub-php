@@ -5,18 +5,17 @@
         <form class="popup__form" action="#">
             <div class="popup__wrapper">
                 <button class="popup__close-btn" data-close></button>
-                <h2 class="popup__title">Заказ</h2>
+                <h2 class="popup__title">Замовлення</h2>
                 <div class="popup__content">
-                    <p class="popup__text">Оставьте ваше имя и номер телефона
-                        и наш менеджер перезвонит вам</p>
+                    <p class="popup__text">Залишіть Ваш номер телефону та менеджер зателефонує Вам</p>
                     <span class="popup__product">{{$product->name}}</span>
                     <div class="popup__input-items">
-                        <input class="popup__input" type="text" placeholder="Ваше имя" id="name" required>
+                        <input class="popup__input" type="text" placeholder="Ваше ім'я" id="name" required>
                         <label class="popup__label" for="name">*</label>
                         <input class="popup__input" type="tel" placeholder="Ваш телефон" id="phone" required>
                         <label class="popup__label" for="phone">*</label>
-                        <textarea class="popup__input popup__input-message" name="delivery-message" cols="30" rows="10" placeholder="Коментарий"></textarea>
-                        <input class="popup__btn" type="submit" value="Отправить">
+                        <textarea class="popup__input popup__input-message" name="delivery-message" cols="30" rows="10" placeholder="Коментар"></textarea>
+                        <input class="popup__btn" type="submit" value="Надіслати">
                     </div>
                 </div>
             </div>
@@ -30,10 +29,10 @@
 
             <div class="product-content__wrapper">
 
-                <button class="product-content__aside-btn--mobile">Фильтр</button>
+                <button class="product-content__aside-btn--mobile">Фільтр</button>
                 <section class="gallery">
                     <div class="gallery__tags-info">
-                        <span class="gallery__tags-item">в наличии</span>
+                        <span class="gallery__tags-item">в наявності</span>
                         <span class="gallery__tags-vendor">Артикул: <strong>1234565</strong></span>
                     </div>
 
@@ -53,12 +52,12 @@
                             <table class="gallery__table">
                                 <tbody>
                                     <tr class="gallery__table-row">
-                                        <td class="gallery__table-cell gallery__table-title">Марка</td>
-                                        <td class="gallery__table-cell gallery__table-content">{{$product->brand_id->name}}</td>
+                                        <td class="gallery__table-cell gallery__table-title">Бренд</td>
+                                        <td class="gallery__table-cell gallery__table-content">{{$product->brand->name}}</td>
                                     </tr>
 
                                     <tr class="gallery__table-row">
-                                        <td class="gallery__table-cell gallery__table-title">Год</td>
+                                        <td class="gallery__table-cell gallery__table-title">Рік</td>
                                         <td class="gallery__table-cell gallery__table-content">{{$product->year}}</td>
                                     </tr>
 
@@ -69,7 +68,7 @@
                                 <span class="gallery__price-count">
                                     <strong>{{$product->price}}</strong> UAH <span class="gallery__price-count gallery__price-count--color">/ 3$</span>
                                 </span>
-                                <button class="gallery__btn">Заказать</>
+                                <button class="gallery__btn">Замовити</>
                             </div>
 
                         </div>
@@ -80,12 +79,12 @@
                     <div class="other__head">
                         <label class="other__label">
                             <input class="other__radio _visually-hidden" type="radio" name="other-info" checked value="slider">
-                            <h5 class="other__title">Похожие запчасти</h5>
+                            <h5 class="other__title">Схожі товари</h5>
                         </label>
 
                         <label class="other__label">
                             <input class="other__radio _visually-hidden" type="radio" name="other-info" value="info">
-                            <h5 class="other__title">Дополнительная информация</h5>
+                            <h5 class="other__title">Додаткова інформація</h5>
                         </label>
                     </div>
 
@@ -110,48 +109,6 @@
                                         </p>
                                         <div class="card__price"><span class="card__price-count">10 000</span> UAH
                                             <span class="card__price-count--color">/ 350$</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="other-slider__item swiper-slide">
-                                    <div class="card ">
-                                        <img class="card__img" src="../img/product-3.png" alt="">
-                                        <p class="card__descr">Двигатель 00058557 Honda Pilot II 2008 - 2015</p>
-                                        <div class="card__price"><span class="card__price-count">1000</span> UAH
-                                            <span class="card__price-count--color">/ 35$</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="other-slider__item swiper-slide">
-                                    <div class="card ">
-                                        <img class="card__img" src="../img/product-1.png" alt="">
-                                        <p class="card__descr">Ручка наружная 00093654 Ford Explorer v 2010 - 2019
-                                        </p>
-                                        <div class="card__price"><span class="card__price-count">100</span> UAH
-                                            <span class="card__price-count--color">/ 3$</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="other-slider__item swiper-slide">
-                                    <div class="card ">
-                                        <img class="card__img" src="../img/product-2.png" alt="">
-                                        <p class="card__descr">Блок упраления ДВС 00089225 Infiniti FX I 2002 - 2008
-                                        </p>
-                                        <div class="card__price"><span class="card__price-count">10 000</span> UAH
-                                            <span class="card__price-count--color">/ 350$</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="other-slider__item swiper-slide">
-                                    <div class="card ">
-                                        <img class="card__img" src="../img/product-3.png" alt="">
-                                        <p class="card__descr">Двигатель 00058557 Honda Pilot II 2008 - 2015</p>
-                                        <div class="card__price"><span class="card__price-count">1000</span> UAH
-                                            <span class="card__price-count--color">/ 35$</span>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +170,7 @@
                             предложения
                             залетают прямо в рот.
                         </p>
-                        <a href="#" class="link">Читать полностью</a>
+                        <a href="#" class="link">Читати повністю</a>
                     </div>
                 </div>
             </div>
