@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\MainController;
@@ -27,3 +28,4 @@ Route::get('/about', [AboutController::class, 'index']);
 Route::get('/product/{id}', [ProductsController::class, 'single']);
 
 Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin/product', [ProductController::class, 'index']);
