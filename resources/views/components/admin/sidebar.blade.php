@@ -7,33 +7,58 @@
 
         <div class="card border-0">
             <div class="card-body">
-                <div class="row">
+                <div class="row align-items-center mb-2">
                     <div class="col-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        <img src={{ asset('img/user.png') }} class="img-fluid rounded-start img-thumbnail" alt="User">
                     </div>
                     <div class="col-8">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <h5 class="card-title">Oleh Admin</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Admin</h6>
                     </div>
                 </div>
-
-
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <a href="#" class="card-link">Налаштування</a>
             </div>
         </div>
     </div>
     <div class="col-12">
-        <ul class="nav flex-column collapse collapse-horizontal d-lg-flex" id="sidebarLinks">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-        </ul>
+        <div class="flex-column collapse collapse-horizontal d-lg-flex" id="sidebarLinks">
+            <div class="accordion accordion-flush" id="sidebar-links">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#products-body" aria-expanded="false">
+                            Товари
+                        </button>
+                    </h2>
+                    <div id="products-body" class="accordion-collapse collapse" data-bs-parent="#sidebar-links">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column gap-2">
+                                <a href="/admin/product/add" class="btn btn-outline-primary">Додати товар</a>
+                                <a href="#" class="btn btn-outline-primary">Редагувати товар</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#brands-body" aria-expanded="false">
+                            Бренди та категорії
+                        </button>
+                    </h2>
+                    <div id="brands-body" class="accordion-collapse collapse" data-bs-parent="#sidebar-links">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column gap-2">
+                                <a href="#" class="btn btn-outline-primary">Додати бренд</a>
+                                <a href="#" class="btn btn-outline-primary">Редагувати бренд</a>
+                                <a href="#" class="btn btn-outline-primary">Додати категорію</a>
+                                <a href="#" class="btn btn-outline-primary">Редагувати категорію</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -28,4 +28,4 @@ Route::get('/about', [AboutController::class, 'index']);
 Route::get('/product/{id}', [ProductsController::class, 'single']);
 
 Route::get('/admin', [AdminController::class, 'index']);
-Route::get('/admin/product', [ProductController::class, 'index']);
+Route::get('/admin/product/add', [ProductController::class, 'index']);
