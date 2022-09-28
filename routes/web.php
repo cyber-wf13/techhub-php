@@ -29,5 +29,6 @@ Route::get('/product/{id}', [ProductsController::class, 'single']);
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index']);
-    Route::get('/product/add', [ProductController::class, 'index']);
+    Route::get('/product', [ProductController::class, 'index']);
+    Route::post('/product/add', [ProductController::class, 'addProduct']);
 });

@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <div class="row flex-column-reverse flex-lg-row">
             <x-admin.sidebar />
-            <div class="col-12 col-lg-10 px-0">
+            <div class="col-12 col-lg-10 px-0 position-relative">
                 <x-admin.header />
                 <div class="container">
                     <div class="row">

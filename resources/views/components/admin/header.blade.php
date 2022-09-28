@@ -25,4 +25,13 @@
             </div>
         </div>
     </nav>
+    <div class="position-absolute top-0 start-0 end-0 p-2">
+        @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger width-100 fade show">
+            {{$error}}
+        </div>
+        @endforeach
+        @endif
+    </div>
 </header>

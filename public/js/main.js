@@ -3200,6 +3200,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
 
+function alertClearByTime() {
+  var TIME = 3000;
+  var alertList = document.querySelectorAll(".alert");
+
+  if (alertList.length === 0) {
+    return;
+  }
+
+  var alerts = [].slice.call(alertList).map(function (element) {
+    return new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Alert(element);
+  });
+  setTimeout(function () {
+    alerts.forEach(function (alert) {
+      alert.close();
+    });
+  }, TIME);
+}
+
+alertClearByTime();
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
