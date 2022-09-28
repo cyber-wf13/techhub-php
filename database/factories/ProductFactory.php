@@ -15,9 +15,12 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $this->faker->sentence(),
-            'brand' => $this->faker->numberBetween(1, 6),
-            'year' => $this->faker->year(),
-            'price' => $this->faker->numberBetween(125, 1200)
+            'brand_id' => $this->faker->numberBetween(1, 6),
+            'type_id' => $this->faker->numberBetween(1, 3),
+            'count' => $this->faker->numberBetween(0, 1000),
+            'price' => $this->faker->numberBetween(125, 1200),
+            'article' => $this->faker->randomNumber(9, true),
+            'descr' => $this->faker->paragraph($this->faker->numberBetween(8, 16)),
         ];
     }
 }
