@@ -33,5 +33,10 @@
         </div>
         @endforeach
         @endif
+        @if (session('success'))
+        <div class="alert alert-success width-100 fade show">
+            {{session('success')}}
+        </div>
+        @endif
     </div>
 </header>

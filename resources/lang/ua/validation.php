@@ -39,7 +39,7 @@ return [
     'declined' => 'The :attribute must be declined.',
     'declined_if' => 'The :attribute must be declined when :other is :value.',
     'different' => 'The :attribute and :other must be different.',
-    'digits' => 'The :attribute must be :digits digits.',
+    'digits' => 'Поле :attribute повинне бути довжиною :digits символів.',
     'digits_between' => 'The :attribute must be between :min and :max digits.',
     'dimensions' => 'The :attribute has invalid image dimensions.',
     'distinct' => 'The :attribute field has a duplicate value.',
@@ -117,7 +117,7 @@ return [
     'required_without_all' => 'The :attribute field is required when none of :values are present.',
     'same' => 'The :attribute and :other must match.',
     'size' => [
-        'numeric' => 'Поле ":attribute" повинне бути довжиною :size символів.',
+        'numeric' => 'Поле ":attribute" повинне дорівнювати :size.',
         'file' => 'The :attribute must be :size kilobytes.',
         'string' => 'The :attribute must be :size characters.',
         'array' => 'The :attribute must contain :size items.',

@@ -25,7 +25,7 @@ class AddProductRequest extends FormRequest
     {
         return [
             'product-name' => 'required|max:100',
-            'product-article' => 'required|integer|size:9',
+            'product-article' => 'required|digits:9',
             'product-price' => 'required|integer',
             'product-count' => 'required|integer',
             'product-descr' => 'required|min:5',

@@ -1,4 +1,4 @@
-<div class="col-12 col-lg-2 px-0 vh-100">
+<div class="col-12 col-lg-2 px-0 vh-100 shadow-sm">
     <div class="col-12 d-flex justify-content-between align-items-start">
         <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarLinks"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,8 +33,8 @@
                     <div id="products-body" class="accordion-collapse collapse" data-bs-parent="#sidebar-links">
                         <div class="accordion-body">
                             <div class="d-flex flex-column gap-2">
-                                <a href="/admin/product" class="btn btn-outline-primary">Додати товар</a>
-                                <a href="#" class="btn btn-outline-primary">Редагувати товар</a>
+                                <a href="/admin/product/add" class="btn btn-outline-primary">Додати товар</a>
+                                <a href="/admin/product/edit" class="btn btn-outline-primary">Редагувати товар</a>
                             </div>
                         </div>
                     </div>

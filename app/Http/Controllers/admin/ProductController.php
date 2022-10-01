@@ -4,31 +4,56 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddProductRequest;
+use App\Models\Brand;
 use App\Models\Product;
+use App\Models\Type;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function addProductIndex()
     {
-        return view('admin.product');
+        $types = Type::all();
+        $brands = Brand::all();
+        return view('admin.product', ['types' => $types, 'brands' => $brands]);
     }
 
-    public function addProduct(AddProductRequest $request)
+    public function editProductIndex($article = null)
+    {
+        $types = Type::all();
+        $brands = Brand::all();
+        $viewParams = ['types' => $types, 'brands' => $brands, 'product' => null];
+        if ($article) {
+            $searchedProduct = Product::getProductByArticle($article);
+            if ($searchedProduct === null) {
+                return redirect('/admin/product/edit')->withErrors('Товар за даним параметром не знайдено');
+            }
+            $viewParams['product'] = $searchedProduct;
+        }
+        return view('admin.productEdit', $viewParams);
+    }
+
+    public function editProductSearch(Request $request)
+    {
+        $validated = $request->validate(['search-article' => 'required|digits:9']);
+        $toPath = '/admin/product/edit/' . $validated['search-article'];
+        return redirect($toPath);
+    }
+
+    public function storeProduct(AddProductRequest $request)
     {
         $validated = $request->validated();
 
-        // $product = Product::create([
-        //     'name' => $request['product-name'],
-        //     'article' => $request['product-article'],
-        //     'brand_id' => $request['product-brand'],
-        //     'type_id' => $request['product-type'],
-        //     'count' => $request['product-count'],
-        //     'descr' => $request['product-descr'],
-        //     'price' => $request['product-price']
-        // ]);
-        // $product = new Product();
-        // $product->name = $request['product-name'];
+        Product::create([
+            'name' => $validated['product-name'],
+            'article' => $validated['product-article'],
+            'brand_id' => $validated['product-brand'],
+            'type_id' => $validated['product-type'],
+            'count' => $validated['product-count'],
+            'descr' => $validated['product-descr'],
+            'price' => $validated['product-price']
+        ]);
 
-        dd($validated);
+        return back()->with('success', 'Товар був успішно доданий');
     }
 }

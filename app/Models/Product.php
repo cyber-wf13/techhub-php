@@ -15,4 +15,18 @@ class Product extends Model
     {
         return $this->hasOne(Brand::class, 'id', 'brand_id');
     }
+
+    public function type()
+    {
+        return $this->hasOne(Type::class, 'id', 'type_id');
+    }
+
+    public static function getProductByArticle(String $article)
+    {
+        $searchedProduct = Product::where('article', $article)->first();
+        if ($searchedProduct) {
+            return $searchedProduct;
+        }
+        return null;
+    }
 }
