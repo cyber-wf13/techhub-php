@@ -31,6 +31,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index']);
     Route::get('/product/add', [ProductController::class, 'addProductIndex']);
     Route::get('/product/edit/{article?}', [ProductController::class, 'editProductIndex']);
+    Route::post('/product/edit/update/{id}', [ProductController::class, 'editProductUpdate']);
     Route::post('/product/edit/search', [ProductController::class, 'editProductSearch']);
     Route::post('/product/store', [ProductController::class, 'storeProduct']);
 });

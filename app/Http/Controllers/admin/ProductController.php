@@ -33,6 +33,23 @@ class ProductController extends Controller
         return view('admin.productEdit', $viewParams);
     }
 
+    public function editProductUpdate(AddProductRequest $request, $id)
+    {
+        $updateProduct = Product::find($id);
+        $validated = $request->validated();
+        $updateProduct->update([
+            'name' => $validated['product-name'],
+            'article' => $validated['product-article'],
+            'brand_id' => $validated['product-brand'],
+            'type_id' => $validated['product-type'],
+            'count' => $validated['product-count'],
+            'descr' => $validated['product-descr'],
+            'price' => $validated['product-price']
+        ]);
+        $toPath = '/admin/product/edit/' . $updateProduct['article'];
+        return redirect($toPath)->with('success', 'Товар був успішно оновлений');
+    }
+
     public function editProductSearch(Request $request)
     {
         $validated = $request->validate(['search-article' => 'required|digits:9']);

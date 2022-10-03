@@ -21,9 +21,12 @@
         </div>
         <div class="col-12">
             @if ($product)
-            {{$product->id}}
+            <p class="lead">
+                ID вибраного продукту: <b>{{$product->id}}</b>
+            </p>
             @endif
-            <x-admin.productForm url="/admin/product/update" :brands="$brands" :types="$types" />
+            <x-admin.productForm url="/admin/product/edit/update/{{$product->id ?? ''}}" :brands="$brands"
+                :types="$types" :hideDisabled="$product" :product="$product" />
         </div>
     </div>
 </x-admin.layout>
