@@ -33,8 +33,9 @@
                     <div id="products-body" class="accordion-collapse collapse" data-bs-parent="#sidebar-links">
                         <div class="accordion-body">
                             <div class="d-flex flex-column gap-2">
-                                <a href="/admin/product/add" class="btn btn-outline-primary">Додати товар</a>
-                                <a href="/admin/product/edit" class="btn btn-outline-primary">Редагувати товар</a>
+                                <a href={{ url('/admin/product/add') }} class="btn btn-outline-primary">Додати товар</a>
+                                <a href={{ url('/admin/product/edit') }} class="btn btn-outline-primary">Редагувати
+                                    товар</a>
                             </div>
                         </div>
                     </div>
@@ -44,16 +45,17 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#brands-body" aria-expanded="false">
-                            Бренди та категорії
+                            Бренди та типи
                         </button>
                     </h2>
                     <div id="brands-body" class="accordion-collapse collapse" data-bs-parent="#sidebar-links">
                         <div class="accordion-body">
                             <div class="d-flex flex-column gap-2">
-                                <a href="#" class="btn btn-outline-primary">Додати бренд</a>
-                                <a href="#" class="btn btn-outline-primary">Редагувати бренд</a>
-                                <a href="#" class="btn btn-outline-primary">Додати категорію</a>
-                                <a href="#" class="btn btn-outline-primary">Редагувати категорію</a>
+                                <a href={{ url('admin/characters/add') }} class="btn btn-outline-primary">Додати бренд
+                                    / тип</a>
+                                <a href={{ url('admin/characters/edit') }} class="btn btn-outline-primary">Редагувати
+                                    бренд /
+                                    тип</a>
                             </div>
                         </div>
                     </div>

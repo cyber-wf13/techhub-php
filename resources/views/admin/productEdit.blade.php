@@ -1,6 +1,8 @@
 <x-admin.layout>
     <div class="col-12">
         <div class="col-12 my-3">
+            <h2 class="my-2">Редагувати товар</h2>
+            <hr>
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-bs-toggle="dropdown" aria-expanded="false">
