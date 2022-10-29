@@ -25,8 +25,8 @@
                                             name="type-{{$type->id}}">
                                     </td>
                                     <td>
-                                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                            name="type-{{$type->id}}">
+                                        <input class="form-check-input" type="checkbox" name="type-id[]"
+                                            value="{{$type->id}}">
                                     </td>
                                 </tr>
                                 @endforeach
@@ -50,7 +50,12 @@
                                 <tr>
                                     <th>{{$brand->id}}</th>
                                     <td>
-                                        <input type="text" class="form-control" value="{{$brand->name}}" name="brand[]">
+                                        <input type="text" class="form-control" value="{{$brand->name}}"
+                                            name="brand-{{$brand->id}}">
+                                    </td>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" name="brand-id[]"
+                                            value="{{$brand->id}}">
                                     </td>
                                 </tr>
                                 @endforeach

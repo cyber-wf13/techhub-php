@@ -26,8 +26,6 @@ class BrandTypeRequest extends FormRequest
         return [
             'type-name' => 'required_if:type-check,on|max:50|unique:types,name',
             'brand-name' => 'required_if:brand-check,on|max:50|unique:brands,name',
-            'type-check' => 'required_without:brand-check',
-            'brand-check' => 'required_without:type-check',
         ];
     }
 
@@ -36,9 +34,6 @@ class BrandTypeRequest extends FormRequest
         return [
             'type-name' => 'Назва типу',
             'brand-name' => 'Назва бренду',
-            'type-check' => 'Назва типу',
-            'brand-check' => 'Назва бренду',
-
         ];
     }
 }

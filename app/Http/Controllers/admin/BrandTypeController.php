@@ -22,17 +22,12 @@ class BrandTypeController extends Controller
 
         $validated = $request->validated();
 
-        if ($isAddType) {
-            $type = new Type();
-            $type->name = $validated['type-name'];
-            $type->save();
+        if (!$isAddType && !$isAddBrand) {
+            return back()->withErrors('Виберіть один з пунктів');
         }
 
-        if ($isAddBrand) {
-            $brand = new Brand();
-            $brand->name = $request['brand-name'];
-            $brand->save();
-        }
+        $this->storeCharacterLogic($isAddType, $validated, 'type-name', Type::class);
+        $this->storeCharacterLogic($isAddBrand, $validated, 'brand-name', Brand::class);
 
         return back()->with('success', 'Категорія була успішно додана');
     }
@@ -44,10 +39,40 @@ class BrandTypeController extends Controller
 
     public function editCharacterUpdate(Request $request)
     {
-        // $brandsDb = Brand::all();
-        // $typesDb = Type::all();
+        $typeIdArray = $request['type-id'];
+        $brandIdArray = $request['brand-id'];
 
-        dd($request);
-        return "1";
+        if ($typeIdArray === null && $brandIdArray === null) {
+            return back()->withErrors('Виберіть один із пунктів для редагування');
+        }
+
+        if ($typeIdArray !== null) {
+            $this->updateCharacterLogic($typeIdArray, Type::class, 'type-', $request);
+        }
+
+        if ($brandIdArray !== null) {
+            $this->updateCharacterLogic($brandIdArray, Brand::class, 'brand-', $request);
+        }
+
+
+        return back()->with('success', 'Категорія була успішно оновлена');
+    }
+
+    private function updateCharacterLogic(array $idArray, $modelName, String $prefix, Request $request)
+    {
+        foreach ($idArray as $id) {
+            $value = $modelName::find($id);
+            $value->name = $request[$prefix . $id];
+            $value->save();
+        }
+    }
+
+    private function storeCharacterLogic(Bool $isAdd, array $validRequest, String $prefix, $modelName)
+    {
+        if ($isAdd) {
+            $value = new $modelName();
+            $value->name = $validRequest[$prefix];
+            $value->save();
+        }
     }
 }
